@@ -1,0 +1,77 @@
+RideWithEdwinSpeed V6 - Secure Owner Login
+===========================================
+
+WHAT IS NEW
+-----------
+- Secure server-side owner login using an HTTP-only session cookie.
+- Admin dashboard is protected on the server.
+- Booking list and booking status changes require authentication.
+- Customer booking creation and public tracking remain available.
+- Logout button added to the dashboard.
+- Admin password is stored as a bcrypt hash, not plain text.
+
+IMPORTANT
+---------
+This is a secure MVP foundation, but before a public launch you should still add:
+- HTTPS on your hosting provider
+- a persistent production session store instead of Express's default memory store
+- login rate limiting / brute-force protection
+- stronger request validation and monitoring
+- regular database backups
+- a custom domain and production hosting
+
+LOCAL SETUP
+-----------
+1. Install Node.js (LTS) on the computer/server.
+2. Open a terminal inside this project folder.
+3. Run:
+     npm install
+
+4. Create a password hash:
+     node create-password-hash.js
+   Enter the owner password when prompted and copy the printed bcrypt hash.
+
+5. Copy .env.example to .env.
+
+6. Edit .env:
+     ADMIN_EMAIL=your real owner email
+     ADMIN_PASSWORD_HASH=the bcrypt hash
+     SESSION_SECRET=a long random secret
+     NODE_ENV=development
+
+7. Start the website:
+     npm start
+
+8. Open:
+     http://localhost:3000
+
+9. Admin login:
+     http://localhost:3000/admin-login.html
+
+PRODUCTION
+----------
+Set NODE_ENV=production and use HTTPS. Do not upload .env to GitHub or share it publicly.
+The owner login credentials are configured on the server, not inside the HTML/JavaScript.
+
+DEFAULT ADMIN PASSWORD
+----------------------
+There is NO default password. You must create your own password during setup.
+
+
+RIDER SYSTEM
+------------
+Riders can register at:
+  /rider-register.html
+
+After registration, the owner signs into:
+  /admin-login.html
+
+Then the owner can approve the rider under Rider Applications.
+
+Approved riders can sign in at:
+  /rider-login.html
+
+Riders see only bookings assigned to them and can move an assigned booking through:
+  Rider Assigned -> Picked Up -> On the Way -> Delivered
+
+NOTE: This version does not yet include GPS/live map tracking, rider document verification, payout calculations, or automated SMS/WhatsApp notifications.

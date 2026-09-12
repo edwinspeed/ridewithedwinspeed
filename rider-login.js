@@ -1,0 +1,4 @@
+const form=document.getElementById('loginForm'),button=document.getElementById('loginButton'),message=document.getElementById('loginMessage');
+(async()=>{try{const r=await fetch('/api/riders/me');if(r.ok)location.href='/rider-dashboard.html';}catch(_){}})();
+form.addEventListener('submit',async e=>{e.preventDefault();message.textContent='';button.disabled=true;button.textContent='Signing in...';
+try{const r=await fetch('/api/riders/login',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({identifier:identifier.value.trim(),password:password.value})});const d=await r.json();if(!r.ok)throw Error(d.error||'Login failed.');location.href='/rider-dashboard.html';}catch(err){message.textContent=err.message;}finally{button.disabled=false;button.textContent='Sign In';}});

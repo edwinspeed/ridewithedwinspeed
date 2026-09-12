@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RideWithEdwinSpeed | Fast & Reliable Logistics</title>
+  <meta name="description" content="Book a bike rider for deliveries, errands, food pickup and logistics across Ewekoro Local Government and Abeokuta.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a class="logo" href="#home"><img src="logo.png" alt="RideWithEdwinSpeed logo"></a>
+      <button class="menu" onclick="toggleMenu()">☰</button>
+      <nav id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#booking">Book a Rider</a>
+        <a href="#how">How It Works</a>
+        <a href="#tracking">Track</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">EWEKORO • ABEOKUTA</p>
+          <h1>Move it. <br><span>We'll handle the rest.</span></h1>
+          <p class="hero-text">Fast, reliable bike delivery, errands, food pickup and logistics services for individuals and businesses.</p>
+          <div class="buttons">
+            <a class="btn primary" href="#booking">Book a Rider</a>
+            <a class="btn secondary" href="https://wa.me/2347068552116?text=Hello%20RideWithEdwinSpeed%2C%20I%20want%20to%20book%20a%20rider." target="_blank">WhatsApp Us</a>
+          </div>
+        </div>
+        <div class="hero-logo"><img src="logo.png" alt="RideWithEdwinSpeed"></div><div class="booking-card">
+          <h2>Need a rider?</h2>
+          <p>Tell us where to pick up and where to deliver.</p>
+          <a class="btn primary full" href="#booking">Start a Booking</a>
+          <div class="quick"><strong>Call:</strong> 0706 855 2116<br><strong>Call:</strong> 0704 861 0914</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="container">
+        <p class="eyebrow">OUR SERVICES</p>
+        <h2>What can we help you with?</h2><p class="intro">From a quick bike pickup to a full errand, we make local logistics simple.</p>
+        <div class="cards">
+          <article class="card"><div class="icon">🛵</div><h3>Bike Delivery</h3><p>Book a rider to pick up and deliver your items safely.</p></article>
+          <article class="card"><div class="icon">📦</div><h3>Parcel Delivery</h3><p>Send packages between homes, offices, shops and customers.</p></article>
+          <article class="card"><div class="icon">🛒</div><h3>Errand Services</h3><p>Need something bought, picked up or handled? Let our rider help.</p></article>
+          <article class="card"><div class="icon">🍔</div><h3>Food Pickup</h3><p>We can collect your food order and bring it to your doorstep.</p></article>
+          <article class="card"><div class="icon">🏪</div><h3>Business Logistics</h3><p>Reliable local delivery support for small businesses and vendors.</p></article>
+          <article class="card"><div class="icon">📍</div><h3>Local Runs</h3><p>Convenient point-to-point rider services across our service area.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section light" id="how">
+      <div class="container">
+        <p class="eyebrow">HOW IT WORKS</p>
+        <h2>Book in four simple steps</h2>
+        <div class="steps">
+          <div><b>1</b><h3>Tell us what you need</h3><p>Choose delivery, errand, food pickup or another service.</p></div>
+          <div><b>2</b><h3>Share locations</h3><p>Give us the pickup and destination details.</p></div>
+          <div><b>3</b><h3>We arrange a rider</h3><p>Our team confirms the request and coordinates the trip.</p></div>
+          <div><b>4</b><h3>Your item gets delivered</h3><p>We complete the job and keep you informed.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="booking">
+      <div class="container booking">
+        <div>
+          <p class="eyebrow">BOOK A RIDER</p>
+          <h2>Let's get your errand moving.</h2>
+          <p>Complete the form. When you submit it, WhatsApp will open with your booking details ready to send to RideWithEdwinSpeed.</p>
+          <div class="service-area"><strong>Service area</strong><br>Ewekoro Local Government and Abeokuta.</div>
+        </div>
+        <form id="bookingForm">
+          <label>Service
+            <select id="service" required>
+              <option value="">Select a service</option>
+              <option>Bike Delivery</option>
+              <option>Parcel Delivery</option>
+              <option>Errand Service</option>
+              <option>Food Pickup</option>
+              <option>Business Logistics</option>
+              <option>Other</option>
+            </select>
+          </label>
+          <label>Your name<input id="name" type="text" required></label>
+          <label>Phone number<input id="phone" type="tel" required></label>
+          <label>Pickup location<input id="pickup" type="text" placeholder="Where should we pick up?" required></label>
+          <label>Drop-off location<input id="dropoff" type="text" placeholder="Where should we deliver?" required></label>
+          <label>What do you need moved/done?<textarea id="details" rows="4" required></textarea></label>
+          <label>Preferred time<input id="time" type="text" placeholder="e.g. Today, 3:00 PM"></label>
+          <button class="btn primary full" type="submit">Request a Rider</button>
+          <p class="form-note">Your booking details will be prepared for WhatsApp so our team can confirm the request.</p>
+          <div id="bookingConfirmation" class="confirmation" hidden></div>
+        </form>
+      </div>
+    </section>
+
+
+    <section class="section light" id="tracking">
+      <div class="container tracking">
+        <p class="eyebrow">TRACK YOUR REQUEST</p>
+        <h2>Check your booking reference</h2>
+        <p>Enter the reference sent to you after your booking. Live tracking will be connected when the business dashboard is added.</p>
+        <div class="track-box">
+          <input id="trackingCode" type="text" placeholder="e.g. RWE-2026-1234">
+          <button class="btn primary" type="button" onclick="checkTracking()">Check Status</button>
+        </div>
+        <div id="trackingResult" class="tracking-result" hidden></div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container">
+        <h2>Need a rider right now?</h2>
+        <p>Call or message RideWithEdwinSpeed.</p>
+        <div class="buttons center">
+          <a class="btn primary" href="tel:+2347068552116">0706 855 2116</a>
+          <a class="btn secondary" href="https://wa.me/2347068552116" target="_blank">WhatsApp</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <div class="container footer-grid">
+      <div><h3>RideWithEdwinSpeed</h3><p>Your local partner for bike delivery, errands and logistics.</p></div>
+      <div><h4>Service Area</h4><p>Ewekoro Local Government<br>Abeokuta</p></div>
+      <div><h4>Contact</h4><p>0706 855 2116<br>0704 861 0914</p></div>
+    </div>
+    <div class="copyright">© 2026 RideWithEdwinSpeed. All rights reserved.</div>
+  </footer>
+
+  <script src="script.js"></script>
+<footer style="text-align:center;padding:28px 16px;color:#66717c;font-size:13px;"><a href="admin-login.html" style="color:inherit;">Owner Login</a></footer>
+<footer style="text-align:center;padding:28px 16px;color:#66717c;font-size:13px;"><a href="rider-login.html" style="color:inherit;margin-right:14px;">Rider Login</a><a href="rider-register.html" style="color:inherit;">Become a Rider</a></footer>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Rider Registration | RideWithEdwinSpeed</title><link rel="stylesheet" href="rider.css"></head>
+<body><main class="auth-shell"><section class="auth-card">
+<img src="logo.png" class="auth-logo" alt="RideWithEdwinSpeed"><h1>Rider Registration</h1>
+<p class="muted">Apply to become a delivery rider with RideWithEdwinSpeed.</p>
+<form id="registerForm">
+<label>Full name<input id="fullName" required></label>
+<label>Phone number<input id="phone" required></label>
+<label>Email <span class="optional">(optional)</span><input id="email" type="email"></label>
+<label>Address <span class="optional">(optional)</span><input id="address"></label>
+<label>Bike model <span class="optional">(optional)</span><input id="bikeModel"></label>
+<label>Plate number <span class="optional">(optional)</span><input id="plateNumber"></label>
+<label>Password<input id="password" type="password" minlength="8" required></label>
+<button id="registerButton">Submit Registration</button>
+<p id="registerMessage" class="message"></p>
+</form><a href="rider-login.html" class="link">Already registered? Rider Login</a>
+</section></main><script src="rider-register.js"></script></body></html>

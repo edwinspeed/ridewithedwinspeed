@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RideWithEdwinSpeed | Admin Dashboard</title>
+<link rel="stylesheet" href="admin.css">
+<style>.admin-section{margin:28px 0;padding:20px;background:#fff;border-radius:14px}.rider-row{border:1px solid #e1e5e9;border-radius:10px;padding:14px;margin:10px 0}.rider-row button{margin:5px 5px 0 0}</style></head>
+<body>
+<header class="topbar">
+  <div class="brand"><img src="logo.png" alt="RideWithEdwinSpeed"> <span>Admin Dashboard</span></div>
+  <button id="logoutButton" class="logout-button" type="button">Log out</button>
+      <a href="index.html">View Website</a>
+</header>
+
+<main class="container">
+  <section class="welcome">
+    <div><p class="eyebrow">OWNER / OPERATIONS</p><h1>Booking Dashboard</h1><p>Manage customer requests and update delivery status.</p></div>
+    <button class="btn" onclick="clearDemoBookings()">Clear Demo Data</button>
+  </section>
+
+  <section class="stats">
+    <div><span>Total</span><strong id="total">0</strong></div>
+    <div><span>Pending</span><strong id="pending">0</strong></div>
+    <div><span>On the Way</span><strong id="ontheway">0</strong></div>
+    <div><span>Delivered</span><strong id="delivered">0</strong></div>
+  </section>
+
+  <section class="panel">
+    <div class="panel-head"><h2>Bookings</h2><button class="btn primary" onclick="addDemoBooking()">Add Demo Booking</button></div>
+    <div id="bookings"></div>
+  </section>
+
+  <section class="notice">
+    <strong>Prototype notice:</strong> this dashboard currently stores demo data in this browser only.
+    The next technical stage is to connect it to a secure online database so bookings from customers
+    appear here automatically and riders can be assigned from any device.
+  </section>
+</main>
+<section id="riderManagement" class="admin-section">
+      <h2>Rider Applications</h2>
+      <p class="muted">Approve riders and assign approved riders to bookings.</p>
+      <div id="ridersList"></div>
+    </section>
+    <script src="admin.js"></script>
+  <script src="admin-auth.js"></script>
+  <script src="admin-riders.js"></script>
+</body>
+</html>
